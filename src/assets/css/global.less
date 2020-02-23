@@ -1,0 +1,29 @@
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .icon-loading{
+        width: 1em;
+        animation: loadingCircle 1s infinite linear;
+        margin-top: 3px;
+    }
+}
+
+@keyframes loadingCircle{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.content-header{
+    padding: 30px;
+}
