@@ -1,0 +1,125 @@
+.overview__page_cont {
+  padding: 20px 40px;
+  min-width: 1000px;
+  .overview__header_cont {
+    background-color: #fff;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+
+    .sdk__main_cont {
+      width: 300px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      .sdk__title_cont {
+        .title_text {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .curr__sdk_img {
+        width: 100%;
+        height: 200px;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        .curr__sdk_desc {
+          position: absolute;
+          bottom: 0;
+          transform: translateY(calc(100% - 40px));
+          transition: transform 0.3s ease;
+          width: 100%;
+          padding: 10px 20px;
+          background-color: rgba(255, 255, 255, 0.5);
+          .desc_title {
+            .title_text {
+              font-weight: 700;
+              font-size: 15px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      .curr__sdk_img:hover .curr__sdk_desc {
+        transform: translateY(0);
+      }
+      .curr__sdk_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .sdk__compression_cont {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 10px;
+        .compression_cont {
+          width: 100px;
+          height: 50px;
+          flex-grow: 1;
+          flex-shrink: 1;
+          border-radius: 3px;
+          overflow: hidden;
+          position: relative;
+
+          cursor: pointer;
+          .compression_img {
+            height: 100%;
+          }
+          .compression_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px);
+          }
+          .compression_text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            p {
+              width: 100%;
+              text-align: center;
+              margin: 0;
+              color: #fff;
+              padding: 0 8px;
+            }
+          }
+          .compress__bottom_bar {
+            height: 3px;
+            background-color: #0099ff;
+            display: none;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+          }
+        }
+
+        .curr__compression_cont {
+          .compression_text {
+            display: none;
+          }
+          .compression_img img {
+            filter: blur(0px);
+          }
+          .compress__bottom_bar {
+            display: block;
+          }
+        }
+      }
+      .compression_cont:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    .sdk__main_cont:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
