@@ -27,7 +27,18 @@ const menus = [
         key: '/ui/typography',
         icon: 'unordered-list',
       },
+      {
+        title: 'Echarts图表',
+        key: '/ui/echarts',
+        icon: 'smile'
+      }
     ],
+  },
+  {
+    title: '表单',
+    icon: '',
+    key: '/form',
+    subs: []
   },
   {
     title: '布局',

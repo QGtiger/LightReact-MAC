@@ -48,6 +48,10 @@ export default class OverView extends React.Component {
       [key]: index,
     })
   }
+
+  handleClickCurImgBox = () => {
+    console.log(233)
+  }
   render() {
     return (
       <div className="overview__page_cont">
@@ -60,6 +64,7 @@ export default class OverView extends React.Component {
                 </div>
                 <div
                   className="curr__sdk_img"
+                  onClick={this.handleClickCurImgBox}
                   ref={(ref) => (this.sdkMainCont = ref)}
                 >
                   {item.sdkList.length > 0 &&
@@ -69,9 +74,7 @@ export default class OverView extends React.Component {
                         timeout={500}
                         classNames="fade"
                         unmountOnExit
-                        onEntered={(el) => {
-                          console.log(el)
-                        }}
+                        
                         appear={true}
                         key={'csstransition' + y}
                       >

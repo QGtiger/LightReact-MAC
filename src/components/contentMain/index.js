@@ -12,6 +12,12 @@ const IconView = LoadableComponent(() =>
 const OverView = LoadableComponent(() =>
   import('../../views/overview/overview')
 )
+const FormView = LoadableComponent(()=>
+  import('../../views/backView/formView/form')
+)
+const EchartsView = LoadableComponent(()=>
+  import('../../views/backView/echartsView')
+)
 
 class contentMain extends React.Component {
   constructor() {
@@ -37,6 +43,8 @@ class contentMain extends React.Component {
             path="/ui/icon"
             component={IconView}
           ></PrivateRoute>
+          <PrivateRoute exact path="/form" component={FormView}></PrivateRoute>
+          <PrivateRoute exact path="/ui/echarts" component={EchartsView}></PrivateRoute>
           <Redirect exact from="/" to="ui/button"></Redirect>
         </Switch>
       </div>
